@@ -1,7 +1,13 @@
-import './App.css'
+import Container from './Teste'
+import EstiloGlobal from './styles'
 
 function App() {
-  return <div className="App"></div>
+  return (
+    <>
+      <EstiloGlobal />
+      <Container />
+    </>
+  )
 }
 
 export default App
