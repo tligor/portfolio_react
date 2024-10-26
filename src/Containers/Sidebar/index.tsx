@@ -3,7 +3,11 @@ import Paragraph from '../../components/Paragraph'
 import Title from '../../components/Title'
 import { Descricao, BotaoTema, SidebarCont } from './styles'
 
-const Sidebar = () => (
+type Props = {
+  switchTheme: () => void
+}
+
+const Sidebar = (props: Props) => (
   <aside>
     <SidebarCont>
       <Avatar />
@@ -14,7 +18,7 @@ const Sidebar = () => (
       <Descricao type="principal" fontSize={12}>
         Desenvolvedor Front-end React | Vue
       </Descricao>
-      <BotaoTema>Trocar tema</BotaoTema>
+      <BotaoTema onClick={props.switchTheme}>Trocar tema</BotaoTema>
     </SidebarCont>
   </aside>
 )
